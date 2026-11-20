@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --bg:#0b0e14; --panel:#131824; --panel2:#0f131d; --ink:#f3f5f8;
+    --muted:#9aa6ba; --line:#2a3346; --red:#e8402f; --gold:#e7b74a;
+    --serif:'Liberation Serif','Times New Roman',serif;
+    --sans:'Liberation Sans','DejaVu Sans',Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#000}
+  .page{
+    width:1024px;height:1024px;background:
+      radial-gradient(1200px 600px at 50% -10%, #16202f 0%, var(--bg) 55%);
+    color:var(--ink);font-family:var(--sans);
+    padding:24px 28px 26px;display:flex;flex-direction:column;overflow:hidden;
+  }
+  /* masthead */
+  .mast{display:flex;align-items:baseline;justify-content:space-between;
+    border-bottom:3px solid var(--red);padding-bottom:8px}
+  .mast .brand{font-family:var(--serif);font-weight:700;font-size:34px;letter-spacing:3px}
+  .mast .brand b{color:var(--red)}
+  .mast .edition{font-size:15px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+  /* dateline hero */
+  .hero{display:flex;align-items:flex-end;justify-content:space-between;
+    padding:12px 0 10px;border-bottom:1px solid var(--line)}
+  .hero .date{font-family:var(--serif);font-weight:700;font-size:99px;line-height:.9;letter-spacing:-1px}
+  .hero .date em{font-style:normal;color:var(--red)}
+  .hero .wd{font-family:var(--serif);font-size:30px;font-weight:700;letter-spacing:6px;
+    color:var(--gold);padding-bottom:8px}
+  /* lead */
+  .lead{position:relative;margin-top:14px;padding:16px 18px 16px 20px;background:var(--panel);
+    border:1px solid var(--line);border-left:6px solid var(--red);border-radius:4px}
+  .tag{display:inline-block;font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    color:var(--red);margin-bottom:6px}
+  .lead h1{font-family:var(--serif);font-weight:700;font-size:43px;line-height:1.0;letter-spacing:-.5px}
+  .lead p{font-size:21px;line-height:1.2;color:var(--muted);margin-top:8px}
+  /* story grid */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;flex:1}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:4px;
+    padding:12px 14px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+  .card .reg{font-size:14px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold)}
+  .card h2{font-family:var(--serif);font-weight:700;font-size:29px;line-height:1.02;margin:6px 0 6px;letter-spacing:-.3px}
+  .card p{font-size:18px;line-height:1.18;color:var(--muted)}
+  .card::after{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--red);opacity:.85}
+  /* strip */
+  .strip{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+  .mini{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--red);
+    border-radius:4px;padding:11px 14px;display:flex;flex-direction:column;position:relative}
+  .mini .reg{font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold)}
+  .mini h3{font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.03;margin:4px 0 4px}
+  .mini p{font-size:16px;line-height:1.15;color:var(--muted)}
+  /* footer */
+  .foot{margin-top:12px;border-top:2px solid var(--red);padding-top:7px;
+    display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted);letter-spacing:.6px}
+  .foot b{color:var(--ink);letter-spacing:2px}
+</style>
+</head>
+<body>
+<div class="page" id="page">
+  <div class="mast">
+    <div class="brand">THE <b>WORLD</b></div>
+    <div class="edition">Daily Front Page &nbsp;·&nbsp; World News in One Image</div>
+  </div>
+
+  <div class="hero">
+    <div class="date">20 NOV <em>2026</em></div>
+    <div class="wd">FRIDAY</div>
+  </div>
+
+  <div class="lead">
+    <span class="tag">Europe · Breaking</span>
+    <h1>RUSSIA LAUNCHES MASS MISSILE STRIKE ON UKRAINE OVERNIGHT</h1>
+    <p>Tu-160 strategic bombers fire volleys; blasts rock Kyiv as Moscow vows revenge.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="reg">Global · Summit</div>
+      <h2>FIRST TRUMP–XI–PUTIN TALKS</h2>
+      <p>Shenzhen trilateral: leaders pledge "a nuclear war can never be won".</p>
+    </div>
+    <div class="card">
+      <div class="reg">Middle East</div>
+      <h2>IRAN STRIKE DECISION PUT OFF</h2>
+      <p>Trump may wait past Jan 1; Senate rejects war powers 48–51.</p>
+    </div>
+    <div class="card">
+      <div class="reg">Asia · Africa</div>
+      <h2>ICJ: MYANMAR GENOCIDE</h2>
+      <p>Historic Rohingya verdict, a first in the court's 80 years.</p>
+    </div>
+    <div class="card">
+      <div class="reg">Americas · Markets</div>
+      <h2>ANTHROPIC'S RECORD IPO</h2>
+      <p>Priced $83, debuts $111.50 on Nasdaq; ~$81bn, largest ever.</p>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="mini">
+      <div class="reg">Asia</div>
+      <h3>CYCLONE AKVAN NEARS INDIA</h3>
+      <p>Landfall forecast near Gopalpur; COP31 in Antalya closes today.</p>
+    </div>
+    <div class="mini">
+      <div class="reg">Latin America</div>
+      <h3>BRAZIL ENACTS 5×2 WORK WEEK</h3>
+      <p>Lula signs decree; regional currencies slide on Fed bets.</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span><b>SOURCES</b> Reuters · AP · Xinhua · Kyiv Independent · ICJ · Indian Express</span>
+    <span>20.11.2026</span>
+  </div>
+</div>
+</body>
+</html>
