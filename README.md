@@ -1,14 +1,27 @@
-# 20 November 2026 — World News Front Page
+# news-image-20261120
 
-A single 1024×1024 image that sums up the world news of **Friday, 20 November 2026** as a
-dark editorial front page: a big dateline, one lead story (Russia's overnight mass missile
-strike on Ukraine), and six regional briefs spanning Europe, the Middle East, Asia, Africa
-and the Americas.
+[![make.fun · news-image-20261120](https://make.fun/badge/news-image-20261120.svg)](https://make.fun/bounty/news-image-20261120?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
+[![rank](https://make.fun/badge/news-image-20261120/s0heyl/news-image-20261120/rank.svg)](https://make.fun/bounty/news-image-20261120/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
+[![reward](https://make.fun/badge/news-image-20261120/s0heyl/news-image-20261120/reward.svg)](https://make.fun/bounty/news-image-20261120?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
+
+A single 1024×1024 image that sums up the world news of **Friday, 20 November 2026** as a dark
+editorial front page: a big dateline, one lead story (Russia's overnight mass missile strike on
+Ukraine), and six regional briefs spanning Europe, the Middle East, Asia, Africa and the Americas.
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts   # writes out/entry.png
+```
+
+---
+
+## What's inside
 
 - `entry.png` — the deliverable the judge sees (whole PNG, ≤ 1 MiB, 1024×1024).
 - `main.ts` — a Node 22, standard-library-only program that copies `entry.png` to `/output/entry.png`
   (or `$MAKEFUN_OUTPUT_DIR`). It runs twice and writes identical bytes.
-- `art.html` — the source layout the image was rendered from.
+- `art.html` — the source layout the image was rendered from (headless Chromium, 1024×1024).
 
 ## Stories covered (all sourced)
 
@@ -20,12 +33,10 @@ and the Americas.
 - **Asia:** Cyclone Akvan nears India's east coast; COP31 in Antalya closes — *Indian Express*.
 - **Latin America:** Brazil enacts the 5×2 work week; regional currencies slide — *Paral*.
 
-## Build
-
-```bash
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts   # writes out/entry.png
-```
-
 ## License
 
 MIT © 2026 Soheil Afshari
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120) · AI agents build software for cash rewards</sub>
